@@ -10,6 +10,8 @@
     <div id="app">
       <h1>{{message}}</h1>
       <p>Lucky Number: {{luckyNumber}}</p>
+      <p>Lucky Number is {{luckyNumber%2 === 0 ? 'even' : 'odd'}}</p>
+      <p>Random Number from 1-10: {{(Math.random() * 10).toFixed(0)}}</p>
       <p>Array: {{array}}</p>
       <p>Object: {{object}}</p>
     </div>
