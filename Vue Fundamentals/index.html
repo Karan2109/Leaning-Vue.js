@@ -9,6 +9,9 @@
   <body>
     <div id="app">
       <h1>{{message}}</h1>
+      <p>Lucky Number: {{luckyNumber}}</p>
+      <p>Array: {{array}}</p>
+      <p>Object: {{object}}</p>
     </div>
 
     <script>
@@ -16,8 +19,16 @@
 
       createApp({
         setup() {
+          const message = "Hello I am starting with Vue.js";
+          const luckyNumber = 21;
+          const array = [1, 2, 3, 4, 5];
+          const object = { name: "John", age: 30 };
+
           return {
-            message: "Hello I am starting with Vue.js",
+            message,
+            luckyNumber,
+            array,
+            object,
           };
         },
       }).mount("#app");
