@@ -15,6 +15,7 @@
       <p>Random Number from 1-10: {{randomNumber()}}</p>
       <p>Array: {{array}}</p>
       <p>Object: {{object}}</p>
+      <p>Message from function: {{getMessage()}}</p>
     </div>
 
     <script>
@@ -33,12 +34,17 @@
             return Math.floor(Math.random() * 10) + 1;
           };
 
+          const getMessage = () => {
+            return message.toUpperCase();
+          };
+
           return {
             message,
             luckyNumber,
             array,
             object,
             randomNumber,
+            getMessage,
           };
         },
       }).mount("#app");
