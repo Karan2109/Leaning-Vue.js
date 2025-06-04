@@ -17,25 +17,34 @@
       <p>Object: {{object}}</p>
       <p>Message from function: {{getMessage()}}</p>
       <p>Hobbies: {{object.hobbies.join(', ')}}</p>
+      <p>Salary: {{object.salary}}</p>
     </div>
 
     <script>
-      const { createApp, ref } = Vue;
+      const { createApp, ref, reactive } = Vue;
 
       createApp({
         setup() {
           const message = "Hello I am starting with Vue.js";
           const luckyNumber = ref(21);
           const array = ref([1, 2, 3, 4, 5]);
-          const object = ref({
+          const object = reactive({
             name: "John",
             age: 30,
             city: "New York",
             hobbies: ["reading", "gaming", "coding"],
+            salary: 50000,
           });
 
-          // create a random number between 1 and 10 function
+          function timeUpdate() {
+            setTimeout(() => {
+              object.salary = 70000;
+            }, 2000);
+          }
 
+          timeUpdate();
+
+          // create a random number between 1 and 10 function
           const randomNumber = () => {
             luckyNumber.value = Math.floor(Math.random() * 10) + 1;
             console.log("Lucky Number:", luckyNumber.value);
@@ -54,6 +63,7 @@
             object,
             randomNumber,
             getMessage,
+            timeUpdate,
           };
         },
       }).mount("#app");
