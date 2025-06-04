@@ -16,6 +16,7 @@
       <p>Array: {{array}}</p>
       <p>Object: {{object}}</p>
       <p>Message from function: {{getMessage()}}</p>
+      <p>Hobbies: {{object.hobbies.join(', ')}}</p>
     </div>
 
     <script>
@@ -25,8 +26,13 @@
         setup() {
           const message = "Hello I am starting with Vue.js";
           const luckyNumber = ref(21);
-          const array = [1, 2, 3, 4, 5];
-          const object = { name: "John", age: 30 };
+          const array = ref([1, 2, 3, 4, 5]);
+          const object = ref({
+            name: "John",
+            age: 30,
+            city: "New York",
+            hobbies: ["reading", "gaming", "coding"],
+          });
 
           // create a random number between 1 and 10 function
 
