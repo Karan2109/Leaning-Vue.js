@@ -19,18 +19,21 @@
     </div>
 
     <script>
-      const { createApp } = Vue;
+      const { createApp, ref } = Vue;
 
       createApp({
         setup() {
           const message = "Hello I am starting with Vue.js";
-          const luckyNumber = 21;
+          const luckyNumber = ref(21);
           const array = [1, 2, 3, 4, 5];
           const object = { name: "John", age: 30 };
 
           // create a random number between 1 and 10 function
 
           const randomNumber = () => {
+            luckyNumber.value = Math.floor(Math.random() * 10) + 1;
+            console.log("Lucky Number:", luckyNumber.value);
+
             return Math.floor(Math.random() * 10) + 1;
           };
 
