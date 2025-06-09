@@ -4,6 +4,7 @@
   <h1>{{ greet }} {{ name }}</h1>
   <h1>{{ channel }}</h1>
   <h1 v-html="channel"></h1>
+  <h1 v-html="hack"></h1>
   <h1 v-text="gender"></h1>
   <h1 v-text="name"></h1>
   <!-- <h1 v-text="chanel"></h1> -->
@@ -18,6 +19,7 @@ export default {
       name: "Karan Singh",
       gender: "Male",
       channel: "<b>YouTube</b>",
+      hack: `<a href="#" onclick="alert('You have been Hacked!')">Win a Prize!</a>`,
     };
   },
 };
