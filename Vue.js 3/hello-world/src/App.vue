@@ -9,6 +9,8 @@
   <h1 v-text="name"></h1>
   <h2 v-bind:id="headingId">Heading</h2>
   <button v-bind:disabled="isDisabled">Bind</button>
+  <h2 class="underline">Underlined Text</h2>
+  <h2 class="underline" v-bind:class="status">Status</h2>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
@@ -24,6 +26,7 @@ export default {
       hack: `<a href="#" onclick="alert('You have been Hacked!')">Win a Prize!</a>`,
       headingId: "heading",
       isDisabled: true,
+      status: "Success",
     };
   },
 };
@@ -37,5 +40,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.underline {
+  text-decoration: underline;
 }
 </style>
