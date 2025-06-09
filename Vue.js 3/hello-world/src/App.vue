@@ -37,6 +37,10 @@
   </h2>
 
   <h2 v-bind:style="headerStyleObject">Style using Object</h2>
+
+  <div v-bind:style="[baseStyleObject, successStyleObject]">Success Style</div>
+
+  <div v-bind:style="[baseStyleObject, danderStyleObject]">Danger Style</div>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
@@ -61,6 +65,20 @@ export default {
         color: "cyan",
         fontSize: "50px",
         padding: "20px",
+      },
+      baseStyleObject: {
+        fontSize: "50px",
+        padding: "10px",
+      },
+      successStyleObject: {
+        color: "green",
+        backgroundColor: "lightgreen",
+        border: "1px solid green",
+      },
+      danderStyleObject: {
+        color: "darkred",
+        backgroundColor: "lightcoral",
+        border: "1px solid darkred",
       },
     };
   },
