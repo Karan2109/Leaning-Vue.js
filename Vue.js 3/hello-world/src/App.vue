@@ -26,6 +26,17 @@
   >
     Object conditional movie
   </h2>
+  <h2
+    v-bind:style="{
+      color: highLightColor,
+      fontSize: headerSize + 'px',
+      padding: '20px',
+    }"
+  >
+    Inline styling
+  </h2>
+
+  <h2 v-bind:style="headerStyleObject">Style using Object</h2>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
@@ -44,6 +55,13 @@ export default {
       status: "Success",
       isPromoted: true,
       isSoldOut: true,
+      highLightColor: "Orange",
+      headerSize: 50,
+      headerStyleObject: {
+        color: "cyan",
+        fontSize: "50px",
+        padding: "20px",
+      },
     };
   },
 };
