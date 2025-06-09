@@ -11,6 +11,8 @@
   <button v-bind:disabled="isDisabled">Bind</button>
   <h2 class="underline">Underlined Text</h2>
   <h2 class="underline" v-bind:class="status">Status</h2>
+  <h2 v-bind:class="isPromoted && `promoted`">Promoted Movie</h2>
+  <h2 v-bind:class="isSoldout ? 'sold-out' : 'new'">soldout? Movie</h2>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
@@ -27,6 +29,8 @@ export default {
       headingId: "heading",
       isDisabled: true,
       status: "Success",
+      isPromoted: true,
+      isSoldOut: false,
     };
   },
 };
@@ -44,5 +48,18 @@ export default {
 
 .underline {
   text-decoration: underline;
+}
+
+.promoted {
+  font-style: italic;
+  /* color: green; */
+}
+
+.new {
+  color: green;
+}
+
+.sold-out {
+  color: red;
 }
 </style>
