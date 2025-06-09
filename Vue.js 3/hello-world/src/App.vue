@@ -14,6 +14,9 @@
   <h2 v-bind:class="isPromoted && `promoted`">Promoted Movie</h2>
   <h2 v-bind:class="isSoldout ? 'sold-out' : 'new'">soldout? Movie</h2>
   <h2 v-bind:class="['new', 'promoted']">Newly Promoted Movie</h2>
+  <h2 v-bind:class="[isPromoted && 'promoted', isSoldout ? 'sold-out' : 'new']">
+    Array conditional movie
+  </h2>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
@@ -31,7 +34,7 @@ export default {
       isDisabled: true,
       status: "Success",
       isPromoted: true,
-      isSoldOut: false,
+      isSoldOut: true,
     };
   },
 };
