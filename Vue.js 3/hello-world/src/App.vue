@@ -17,6 +17,15 @@
   <h2 v-bind:class="[isPromoted && 'promoted', isSoldout ? 'sold-out' : 'new']">
     Array conditional movie
   </h2>
+  <h2
+    v-bind:class="{
+      promoted: isPromoted,
+      new: !isSoldout,
+      'sold-out': isSoldOut,
+    }"
+  >
+    Object conditional movie
+  </h2>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
