@@ -1,6 +1,7 @@
 <template>
   <h1>{{ greet }}</h1>
   <h1>My name is {{ name }}</h1>
+  <h1>{{ greet }} {{ name }}</h1>
   <h1 v-text="gender"></h1>
   <h1 v-text="name"></h1>
 </template>
