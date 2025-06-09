@@ -7,6 +7,8 @@
   <h1 v-html="hack"></h1>
   <h1 v-text="gender"></h1>
   <h1 v-text="name"></h1>
+  <h2 v-bind:id="headingId">Heading</h2>
+  <button v-bind:disabled="isDisabled">Bind</button>
   <!-- <h1 v-text="chanel"></h1> -->
 </template>
 
@@ -20,6 +22,8 @@ export default {
       gender: "Male",
       channel: "<b>YouTube</b>",
       hack: `<a href="#" onclick="alert('You have been Hacked!')">Win a Prize!</a>`,
+      headingId: "heading",
+      isDisabled: true,
     };
   },
 };
